@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.comp {
+  &-jet,
+  &-placeholder,
+  &-error,
+  &-loading {
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 2em;
+    width: 210px;
+  }
+
+  &-jet {
+    color: green;
+  }
+  &-placeholder {
+    color: silver;
+  }
+  &-error {
+    color: red;
+  }
+  &-loading {
+    color: orange;
+  }
+}
