@@ -1,0 +1,16 @@
+.level-block {
+  display: flex;
+}
+.level-block p {
+  margin-right: 15px;
+  border: 2px solid silver;
+  padding: 15px;
+  border-radius: 5px;
+}
+.level-block p:hover {
+  border: 2px solid rgb(100, 100, 249);
+}
+
+.action-btns button {
+  margin-right: 10px;
+}
