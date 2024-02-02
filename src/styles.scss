@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.item {
+  border: 2px solid silver;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+}
+
+.item.active {
+  border-color: rgb(127, 148, 255);
+  color: rgb(46, 74, 216);
+  font-weight: bold;
+}
+
+app-list {
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 500px;
+}
