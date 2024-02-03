@@ -7,7 +7,7 @@ import { Product } from './product';
   standalone: true,
   template: `
     @for(product of products; track product.id) {
-    <app-item [product]="product" />
+    <app-item [product]="product" [active]="product.id === '64a6'" />
     }
   `,
   imports: [ItemComponent],

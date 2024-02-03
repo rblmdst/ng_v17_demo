@@ -1,15 +1,20 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  input,
+} from '@angular/core';
 
 @Component({
   selector: 'app-details',
   standalone: true,
   template: `
     <p class="item">
-      {{ productId }}
+      {{ productId() }}
     </p>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DetailsComponent {
-  @Input({ required: true }) productId!: string;
+  productId = input.required();
 }
