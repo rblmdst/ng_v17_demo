@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { JetComponent } from './jet/jet.component';
@@ -19,4 +19,10 @@ import { LoadingComponent } from './loading/loading.component';
     LoadingComponent,
   ],
 })
-export class AppComponent {}
+export class AppComponent {
+  isOk = signal(false);
+
+  onTargetClicked() {
+    this.isOk.set(true);
+  }
+}

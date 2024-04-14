@@ -1,7 +1,21 @@
+<h1>Deferrable Views</h1>
+<!-- 
+  1-hover
+  2-minimum loading time
+  3-different target
+  4-hover or timer 5s
+  5-viewport with target
+  6-prefetch
+  7-custom trigger
+ -->
+@defer() {
 <app-jet></app-jet>
-
-<app-loading></app-loading>
-
+} @placeholder() {
 <app-placeholder></app-placeholder>
-
+} @loading() {
+<app-loading></app-loading>
+} @error() {
 <app-error></app-error>
+}
+
+<div #target class="target">🎯 Target</div>
