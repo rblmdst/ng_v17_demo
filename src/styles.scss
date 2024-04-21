@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+.app-item {
+  display: inline-block;
+  padding: 5px 15px;
+  color: #5fafee;
+}
+.app-item:not(.is-disabled) {
+  text-shadow: -1px 1px 2px #cec9c9;
+}
+
+.app-item:not(.is-disabled):hover {
+  border-color: #2196f3;
+  color: #2196f3;
+  cursor: pointer;
+  text-shadow: -1px 1px 2px #cec9c9;
+}
+
+.app-item.is-disabled {
+  color: #cccbcb;
+  cursor: not-allowed;
+}
+
+.toggler {
+  font-size: 12px;
+  border: 2px solid #ff9800;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-left: 4px;
+  cursor: pointer;
+  color: #ff9800;
+  &:hover {
+    box-shadow: -1px 1px 2px #cec9c9;
+  }
+}
+
+.parent-toggler {
+  text-align: center;
+  font-size: 12px;
+  border: 2px solid #607d8b;
+  padding: 2px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #607d8b;
+  margin: 30px 0px 10px 0px;
+  &:hover {
+    box-shadow: -1px 1px 2px #cec9c9;
+  }
+}
+
+app-item {
+  display: flex;
+  align-items: center;
+  border-top: 1px dashed;
+  padding-top: 10px;
+}
+
+.status {
+  margin-bottom: 10px;
+  color: #607d8b;
+  font-size: 12px;
+}

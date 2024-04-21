@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-
+import { ItemComponent } from './item.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  imports: [ItemComponent],
+  template: `
+    <div class="parent-toggler" (click)="isDisabled = !isDisabled">
+      Parent Toggler
+    </div>
+    <div class="status">Disabled : {{ isDisabled }}</div>
+    <app-item [disabled]="isDisabled" label="Item One" />
+  `,
 })
 export class AppComponent {
-  title = 'ng_17';
+  isDisabled = false;
 }
