@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, Output, input } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  input,
+  model,
+} from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -16,8 +23,12 @@ import { Component, EventEmitter, Input, Output, input } from '@angular/core';
 export class ItemComponent {
   label = input.required<string>();
 
-  // before Signal Inputs
+  // disabled = model(false, { alias: 'toto' });
   @Input() disabled = false;
+  @Output() disabledChange = new EventEmitter<boolean>();
 
-  onTogglerClicked() {}
+  onTogglerClicked() {
+    this.disabled = !this.disabled;
+    this.disabledChange.emit(this.disabled);
+  }
 }
